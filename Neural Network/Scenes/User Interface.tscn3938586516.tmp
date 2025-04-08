@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3 uid="uid://cebkfhatblku"]
+
+[ext_resource type="Script" uid="uid://bck833ffpar1b" path="res://Scripts/User Interface.gd" id="1_aeslj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aeslj")
+
+[node name="Selling Offer" type="TextEdit" parent="."]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 256.0
+offset_bottom = 128.0
+placeholder_text = "Selling Item + Cost"
+editable = false
+wrap_mode = 1
+
+[node name="Buying Offer" type="TextEdit" parent="."]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+placeholder_text = "Buying Item + Cost"
+editable = false
+
+[node name="User Buy Offer" type="TextEdit" parent="."]
+layout_mode = 0
+offset_top = 208.0
+offset_right = 256.0
+offset_bottom = 272.0
+placeholder_text = "Your Buying Offer (Cost)"
+
+[node name="User Sell Offer" type="TextEdit" parent="."]
+layout_mode = 0
+offset_top = 272.0
+offset_right = 256.0
+offset_bottom = 336.0
+placeholder_text = "Your Selling Offer (Cost)"
+
+[node name="Remaining Time" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 48.0
+placeholder_text = "Remaining Time"
+editable = false
+
+[node name="Final Selling Price" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 576.0
+offset_bottom = 64.0
+text = "0.0"
+placeholder_text = "Final Selling Price"
+editable = false
+
+[node name="Final Buying Price" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 576.0
+offset_bottom = 128.0
+text = "0.0"
+placeholder_text = "Final Buying Price"
+editable = false
+
+[node name="Progress Day" type="Button" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 144.0
+offset_right = 576.0
+offset_bottom = 192.0
+text = "Progress Day"
+
+[connection signal="pressed" from="Progress Day" to="." method="_on_progress_day_pressed"]
